@@ -2,20 +2,27 @@ import React from "react";
 import Square from "./Square";
 import "./tictactoe.css";
 
+// Board 是井字棋的遊戲板元件
 function Board({ xIsNext, squares, onPlay }) {
+  // 當方格被點擊時的事件處理函式
   const handleClick = (i) => {
+    // 如果已經有贏家或該方格已經被填充，則直接返回
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
+    // 創建 squares 的副本
     const nextSquares = squares.slice();
+    // 根據當前是 X 還是 O 來更新方格的值
     if (xIsNext) {
       nextSquares[i] = "X";
     } else {
       nextSquares[i] = "O";
     }
+    // 調用 onPlay 函式來更新父元件的狀態
     onPlay(nextSquares);
   };
 
+  // 計算贏家的函式
   const calculateWinner = (squares) => {
     const lines = [
       [0, 1, 2],
@@ -35,21 +42,18 @@ function Board({ xIsNext, squares, onPlay }) {
     return null;
   };
 
+  // 計算當前的贏家
   const winner = calculateWinner(squares);
+  // 根據贏家情況來設置狀態訊息
   let status = winner
     ? `贏家: ${winner}`
     : `下一個玩家: ${xIsNext ? "X" : "O"}`;
-  // let status;
-  // if (winner) {
-  //   status = "贏家 " + winner;
-  // } else {
-  //   status = "下一個玩家: " + (xIsNext ? "X" : "O");
-  // }
 
   return (
     <>
       <div className="status">{status}</div>
       <div>
+        {/* 為每個方格設置對應的值和點擊事件處理函式 */}
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
         <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
@@ -67,4 +71,5 @@ function Board({ xIsNext, squares, onPlay }) {
     </>
   );
 }
+
 export default Board;

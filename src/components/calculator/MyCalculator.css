@@ -1,62 +1,71 @@
+/* 計算機的整體樣式 */
 .calculator {
-    width: 320px;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 10px;
-    background-color: grey;
-    margin: auto;
-    padding: 10px;
+    width: 320px; /* 設定計算機的寬度 */
+    color: white; /* 設定文字顏色為白色 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 設定字體 */
+    border-radius: 10px; /* 設定邊框圓角 */
+    background-color: grey; /* 設定背景顏色為灰色 */
+    margin: auto; /* 讓計算機水平置中 */
+    padding: 10px; /* 設定內距 */
 }
 
+/* 按鈕區域的樣式 */
 .board {
-    display: inline-block;
-    margin: 10px;
+    display: inline-block; /* 設定為行內區塊 */
+    margin: 10px; /* 設定外距 */
 }
 
+/* 顯示區域的樣式 */
 .display {
-    width: 100%;
-    height: 75px;
-    background-color: black;
-    text-align: right;
-    font-size: 50px;
-    border-radius: 5px;
+    width: 100%; /* 設定寬度為 100% */
+    height: 75px; /* 設定高度為 75px */
+    background-color: black; /* 設定背景顏色為黑色 */
+    text-align: right; /* 文字靠右對齊 */
+    font-size: 50px; /* 設定字體大小為 50px */
+    border-radius: 5px; /* 設定邊框圓角 */
 }
 
+/* 一般按鈕的樣式 */
 .btn {
-    background-color: #323232;
-    color: white;
-    width: 60px;
-    height: 60px;
-    font-size: 25px;
-    border-radius: 50%;
-    outline: none;
-    border: 0px;
-    padding: 5%;
-    margin: 5px;
-    cursor: pointer;
+    background-color: #323232; /* 設定背景顏色 */
+    color: white; /* 設定文字顏色 */
+    width: 60px; /* 設定寬度為 60px */
+    height: 60px; /* 設定高度為 60px */
+    font-size: 25px; /* 設定字體大小為 25px */
+    border-radius: 50%; /* 設定邊框圓角為 50% */
+    outline: none; /* 去掉外框 */
+    border: 0px; /* 無邊框 */
+    padding: 5%; /* 設定內距 */
+    margin: 5px; /* 設定外距 */
+    cursor: pointer; /* 設定鼠標樣式為指針 */
 }
 
+/* 功能按鈕的樣式 */
 .btn-action {
-    background-color: brown;
-    color: bisque;
+    background-color: brown; /* 設定背景顏色為棕色 */
+    color: bisque; /* 設定文字顏色為米黃色 */
 }
 
+/* 操作符按鈕的樣式 */
 .btn-operator {
-    background-color: coral;
+    background-color: coral; /* 設定背景顏色為珊瑚色 */
 }
 
+/* 0 按鈕的特殊樣式 */
 .btn-0 {
-    width: 130px;
-    border-radius: 30px;
+    width: 130px; /* 設定寬度為 130px */
+    border-radius: 30px; /* 設定邊框圓角為 30px */
 }
 
-.btn:hover{
-    background-color: white;
-    color: black;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+/* 按鈕懸停時的樣式 */
+.btn:hover {
+    background-color: white; /* 設定背景顏色為白色 */
+    color: black; /* 設定文字顏色為黑色 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* 設定陰影效果 */
 }
 
-.btn:active{
-    background-color: darkred;
-    color: white;
+/* 按鈕被按下時的樣式 */
+.btn:active {
+    background-color: darkred; /* 設定背景顏色為深紅色 */
+    color: white; /* 設定文字顏色為白色 */
 }
